@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { format } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Calendar as CalendarPrimitive } from "react-day-picker";
+import { DayPicker } from "react-day-picker";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
@@ -19,9 +19,9 @@ export function Calendar({
   classNames,
   showOutsideDays = true,
   ...props
-}: React.ComponentProps<typeof CalendarPrimitive>) {
+}: React.ComponentProps<typeof DayPicker>) {
   return (
-    <CalendarPrimitive
+    <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn("p-3 pointer-events-auto", className)}
       classNames={{
